@@ -1,0 +1,16 @@
+# Job -> tier -> models. Every model call goes through core/gateway.py (LiteLLM) to a HOSTED
+# open-weight model API. Self-hosted endpoints (ollama, vllm, local api_base) are rejected at load.
+# Ids verified against Groq's /models list for this key (free tier). Pick final models by golden-set eval.
+version: "0.1.0"
+tiers:
+  T1:
+    models: ["groq/openai/gpt-oss-20b"]
+  T2:
+    models: ["groq/qwen/qwen3.8-27b", "groq/openai/gpt-oss-20b"]
+  T3:
+    models: ["groq/openai/gpt-oss-120b"]
+jobs:
+  extract_tasks:
+    tiers: [T2, T3]        # try T2 models in order, then escalate to T3
+    max_tokens: 2500
+    temperature: 0.1

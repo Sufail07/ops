@@ -1,0 +1,29 @@
+# Paste into: api.slack.com/apps -> Create New App -> From a manifest (YAML tab).
+# Socket Mode: the app connects out to Slack, so no public URL is needed for the MVP.
+display_information:
+  name: Ops Brain
+  description: Turns meeting decisions into tasks, flags slips early, and sends follow-ups.
+  background_color: "#1f2937"
+features:
+  bot_user:
+    display_name: Ops Brain
+    always_online: true
+  slash_commands:
+    - command: /ops
+      description: Ask Ops Brain (plan, why <task>)
+      usage_hint: "plan | why <task>"
+      should_escape: false
+oauth_config:
+  scopes:
+    bot:
+      - chat:write        # post alerts and follow-ups
+      - im:write          # open a DM with each person
+      - commands          # the /ops slash command
+      - users:read        # match Slack users to the team
+      - users:read.email  # ...by email
+settings:
+  interactivity:
+    is_enabled: true      # buttons: Approve, Done, Slipping (delivered over Socket Mode)
+  org_deploy_enabled: false
+  socket_mode_enabled: true
+  token_rotation_enabled: false

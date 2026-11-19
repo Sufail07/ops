@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+runs.jsonl
+.env
+.neon
+node_modules/
+node_modules/
+.neon
+.env.local
+demo/state.json
+demo/out/

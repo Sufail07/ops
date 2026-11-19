@@ -1,0 +1,8 @@
+{"tasks":[
+ {"id":"t1","title":"Finalise partner program API spec","owner_name":"Rahul","due_date":"2026-11-28","due_text":"28 November tak","goal_id":"g_partner","depends_on":[],"evidence_quote":"API spec 28 November tak final ho jayega, main kar dunga","confidence":0.95,"language":"mixed"},
+ {"id":"t2","title":"Build the backend","owner_name":"Meera","due_date":"2026-12-15","due_text":"15 दिसंबर तक","goal_id":"g_partner","depends_on":["t1"],"evidence_quote":"मैं 15 दिसंबर तक backend पूरा कर दूँगी","confidence":0.93,"language":"mixed"},
+ {"id":"t3","title":"QA pass on the backend","owner_name":"Priya","due_date":"2026-12-24","due_text":"24 ડિસેમ્બર સુધીમાં","goal_id":"g_partner","depends_on":["t2"],"evidence_quote":"હું 24 ડિસેમ્બર સુધીમાં QA પૂરું કરીશ","confidence":0.9,"language":"mixed"},
+ {"id":"t4","title":"Send the launch page design","owner_name":"Dev","due_date":"2026-11-27","due_text":"अगले शुक्रवार तक","goal_id":"g_partner","depends_on":[],"evidence_quote":"Launch page ka design मैं अगले शुक्रवार तक भेज दूँगा","confidence":0.8,"language":"mixed"},
+ {"id":"t5","title":"Write the launch page copy","owner_name":null,"due_date":null,"due_text":null,"goal_id":"g_partner","depends_on":["t4"],"evidence_quote":"Copy ka kaam abhi kisi ko assign nahi hua","confidence":0.55,"language":"mixed"},
+ {"id":"t6","title":"Create the partner onboarding email template","owner_name":"Priya","due_date":null,"due_text":"date baad mein decide karenge","goal_id":null,"depends_on":[],"evidence_quote":"partner onboarding email template Priya banayegi","confidence":0.85,"language":"mixed"}
+]}
